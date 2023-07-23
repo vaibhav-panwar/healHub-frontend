@@ -150,7 +150,7 @@ document.getElementById("book").addEventListener("click", (e) => {
         date: slotDate,
         slot: slotTime
     }
-    fetch("http://localhost:8080/appointments/create", {
+    fetch("https://nice-ruby-goose-fez.cyclic.app/appointments/create", {
         method: "POST",
         headers: {
             "Content-type": "Application/json",
@@ -174,7 +174,7 @@ document.getElementById("book").addEventListener("click", (e) => {
 
 function serviceValues(value) {
     selectExpert.innerHTML = "";
-    fetch(`http://localhost:8080/experts/${value}`)
+    fetch(`https://nice-ruby-goose-fez.cyclic.app/experts/${value}`)
         .then((res) => res.json())
         .then((data) => {
             if (!data.isError) {

@@ -43,7 +43,7 @@ fetchdata(ENERGY,"ENERGY HEALING");
 
 
 function fetchdata(div,value){
-    fetch(`http://localhost:8080/experts/${value}`)
+    fetch(`https://nice-ruby-goose-fez.cyclic.app/experts/${value}`)
     .then((res)=>res.json())
     .then((data)=>{
         if(!data.isError){

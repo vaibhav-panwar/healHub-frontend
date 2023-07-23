@@ -37,7 +37,7 @@ function tokenCheck() {
 let bigcont = document.getElementById("bigcont");
 fetchdata();
 function fetchdata() {
-    fetch("http://localhost:8080/appointments/user", {
+    fetch("https://nice-ruby-goose-fez.cyclic.app/appointments/user", {
         headers: {
             "Content-type": "Application/json",
             "Authorization": `Bearer ${localStorage.getItem("userToken")}`
@@ -103,7 +103,7 @@ function cancelAppointment(apid) {
     let obj = {
         status: "cancel"
     }
-    fetch(`http://localhost:8080/appointments/user/${apid}`, {
+    fetch(`https://nice-ruby-goose-fez.cyclic.app/appointments/user/${apid}`, {
         method: "PATCH",
         headers: {
             "Content-type": "Application/json",

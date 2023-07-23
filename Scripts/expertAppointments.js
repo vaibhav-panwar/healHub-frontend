@@ -15,7 +15,7 @@ document.getElementById("logout").addEventListener("click",(e)=>{
 let bigcont = document.getElementById("bigcont");
 fetchdata();
 function fetchdata() {
-    fetch("http://localhost:8080/appointments/expert", {
+    fetch("https://nice-ruby-goose-fez.cyclic.app/appointments/expert", {
         headers: {
             "Content-type": "Application/json",
             "Authorization": `Bearer ${localStorage.getItem("expertToken")}`
@@ -95,7 +95,7 @@ function cancelAppointment(apid) {
     let obj = {
         status: "cancel"
     }
-    fetch(`http://localhost:8080/appointments/expert/${apid}`, {
+    fetch(`https://nice-ruby-goose-fez.cyclic.app/appointments/expert/${apid}`, {
         method: "PATCH",
         headers: {
             "Content-type": "Application/json",
@@ -122,7 +122,7 @@ function confirmAppointment(apid) {
     let obj = {
         status: "confirm"
     }
-    fetch(`http://localhost:8080/appointments/expert/${apid}`, {
+    fetch(`https://nice-ruby-goose-fez.cyclic.app/appointments/expert/${apid}`, {
         method: "PATCH",
         headers: {
             "Content-type": "Application/json",

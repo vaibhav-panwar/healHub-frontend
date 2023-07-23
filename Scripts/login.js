@@ -5,7 +5,7 @@ elform.addEventListener("submit",(e)=>{
         email:document.getElementById("email").value,
         password:document.getElementById("password").value
     }
-    fetch("http://localhost:8080/users/login",{
+    fetch("https://nice-ruby-goose-fez.cyclic.app/users/login",{
         method:"POST",
         headers:{
             "Content-type":"Application/json"
