@@ -1,0 +1,13 @@
+.bc{
+    padding: 20px;
+}
+.heading{
+    font-size: 25px;
+}
+.cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.card>img{
+    width: 100%;
+}
